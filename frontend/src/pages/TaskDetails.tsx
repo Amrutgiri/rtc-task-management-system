@@ -12,7 +12,7 @@ import AttachmentList from "../components/AttachmentList";
 import "../styles/file-upload.css";
 
 // Single socket instance
-const socket = io("http://localhost:3232", { autoConnect: true });
+const socket = io(import.meta.env.VITE_API_URL || "http://localhost:3232", { autoConnect: true });
 
 export default function TaskDetails() {
   const { id } = useParams();
