@@ -11,8 +11,9 @@ import FileUpload from "../components/FileUpload";
 import AttachmentList from "../components/AttachmentList";
 import "../styles/file-upload.css";
 
-// Single socket instance
-const socket = io(import.meta.env.VITE_API_URL || "http://localhost:3232", { autoConnect: true });
+// Single socket instance - remove /api from URL for Socket.IO
+const SOCKET_URL = (import.meta.env.VITE_API_URL || "http://localhost:3232/api").replace('/api', '');
+const socket = io(SOCKET_URL, { autoConnect: true });
 
 export default function TaskDetails() {
   const { id } = useParams();
