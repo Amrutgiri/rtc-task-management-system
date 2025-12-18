@@ -2,11 +2,11 @@ import { createContext, useEffect, useState, useContext } from "react";
 import api from "../api/axios";
 import { AuthContext } from "./AuthContext";
 import { io } from "socket.io-client";
-import { 
-  soundManager, 
+import {
+  soundManager,
   requestNotificationPermission,
   sendBrowserNotification,
-  isNotificationSupported 
+  isNotificationSupported
 } from "../utils/soundManager";
 
 export const NotificationContext = createContext<any>(null);
@@ -29,7 +29,7 @@ export function NotificationProvider({ children }) {
     try {
       const res = await api.get("/notification-settings");
       setSettings(res.data);
-      
+
       // Update sound manager with user preferences
       soundManager.setEnabled(res.data.soundAlerts !== false);
     } catch (err) {
@@ -118,11 +118,29 @@ export function NotificationProvider({ children }) {
     if (!user) return;
 
     if (!socket) {
-      socket = io("http://localhost:3232");
+      // Get backend URL from environment variable
+      const backendUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3232';
+
+      socket = io(backendUrl, {
+        transports: ['websocket', 'polling'], // Try websocket first, fallback to polling
+        reconnection: true,
+        reconnectionAttempts: 5,
+        reconnectionDelay: 1000,
+      });
+
       const token = localStorage.getItem("token");
       if (token) {
         socket.emit("join", token);
       }
+
+      // Add connection error handling
+      socket.on('connect_error', (error) => {
+        console.error('Socket connection error:', error);
+      });
+
+      socket.on('connect', () => {
+        console.log('Socket connected successfully');
+      });
     }
 
     socket.on("notification", (data: any) => {
