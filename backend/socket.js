@@ -10,7 +10,10 @@ function initializeSocket(server) {
     cors: {
       origin: process.env.FRONTEND_ORIGIN || "*",
       methods: ["GET", "POST"],
+      credentials: true,
     },
+    transports: ['websocket', 'polling'], // Support both for better compatibility
+    allowEIO3: true,
   });
 
   io.on("connection", (socket) => {
@@ -87,9 +90,9 @@ function initializeSocket(server) {
         // Check quiet hours
         if (settings.quietHours?.enabled) {
           const now = new Date();
-          const currentTime = now.getHours().toString().padStart(2, '0') + ':' + 
-                             now.getMinutes().toString().padStart(2, '0');
-          
+          const currentTime = now.getHours().toString().padStart(2, '0') + ':' +
+            now.getMinutes().toString().padStart(2, '0');
+
           const start = settings.quietHours.startTime;
           const end = settings.quietHours.endTime;
 
