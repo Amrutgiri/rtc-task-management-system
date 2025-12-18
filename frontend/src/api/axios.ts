@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://rtc-task-management-system.onrender.com",
+  baseURL: "http://localhost:3232",
 });
 
 api.interceptors.request.use((config) => {
