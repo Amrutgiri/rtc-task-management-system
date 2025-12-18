@@ -1,0 +1,6 @@
+title,description,priority,status,projectId,assigneeEmail,taskDate
+Fix Login Bug,Resolve authentication issue on login page,high,open,REPLACE_WITH_PROJECT_ID,john.doe@example.com,2025-12-25
+Update Dashboard,Add new widgets to admin dashboard,medium,in-progress,REPLACE_WITH_PROJECT_ID,jane.smith@example.com,2025-12-30
+Code Review,Review pull request #123 for new features,low,review,REPLACE_WITH_PROJECT_ID,,2025-12-20
+Database Optimization,Optimize slow queries in reports module,high,open,REPLACE_WITH_PROJECT_ID,bob.johnson@example.com,2025-12-28
+UI Enhancement,Improve dark mode styling across all pages,medium,open,REPLACE_WITH_PROJECT_ID,alice.williams@example.com,2026-01-05

@@ -1,0 +1,211 @@
+/* Notifications Page Styles */
+
+.notifications-container {
+  min-height: 100vh;
+}
+
+.notifications-list {
+  margin-bottom: 2rem;
+}
+
+.notification-card {
+  border-left: 4px solid #ccc;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.notification-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.notification-card.unread {
+  border-left-color: #0d6efd;
+  background-color: #f0f7ff;
+  border: 1px solid #dde6f5;
+  border-left: 4px solid #0d6efd;
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  color: #666;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.notification-card.unread .notification-icon {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.notification-content h6 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.notification-card.unread .notification-content h6 {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.notification-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.notification-meta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notification-actions .btn {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.notification-actions .btn:hover {
+  opacity: 1;
+}
+
+/* Pagination */
+.pagination {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination .page-link {
+  color: #0d6efd;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.pagination .page-link:hover {
+  color: #0056b3;
+  background-color: #f0f7ff;
+}
+
+/* Filter buttons */
+.btn-group .btn {
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+/* Empty state */
+.bg-light {
+  background-color: #f5f5f5 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notification-card .card-body {
+    flex-direction: column;
+  }
+
+  .notification-actions {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+
+  .notification-meta {
+    margin-left: 0 !important;
+  }
+}
+
+/* Badge animations */
+.badge {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Settings Page Styles */
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-section .card {
+  border: 1px solid #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.settings-section .card-header {
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
+}
+
+.settings-section .card-body {
+  padding: 1.5rem;
+}
+
+.form-check {
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-check-input {
+  margin-left: -1.75rem;
+  margin-top: 0.3rem;
+}
+
+/* Quiet hours input styles */
+.form-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="time"] {
+  border-radius: 4px;
+}
+
+/* Muted items display */
+.muted-items-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.muted-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Info and alert styling */
+.alert {
+  border-radius: 4px;
+}
+
+.alert-info {
+  background-color: #f0f7ff;
+  border-color: #b6d4fe;
+  color: #055160;
+}

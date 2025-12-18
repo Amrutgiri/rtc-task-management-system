@@ -1,0 +1,113 @@
+/* Keyboard Shortcuts Styling */
+
+.shortcut-modal .modal-content {
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.shortcut-table {
+    margin-bottom: 0;
+}
+
+.shortcut-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.shortcut-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.shortcut-table td {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+    border: none;
+}
+
+.shortcut-keys {
+    width: 40%;
+    white-space: nowrap;
+}
+
+.shortcut-description {
+    width: 60%;
+    color: #495057;
+}
+
+.shortcut-key {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #495057;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+    font-family: "Courier New", monospace;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.shortcut-key:hover {
+    background-color: #e9ecef;
+}
+
+/* Shortcut Overlay */
+.shortcut-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    z-index: 9999;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .shortcut-key {
+    color: #e9ecef;
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+[data-theme="dark"] .shortcut-table tbody tr {
+    border-bottom-color: #343a40;
+}
+
+[data-theme="dark"] .shortcut-description {
+    color: #adb5bd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .shortcut-keys {
+        width: 50%;
+    }
+
+    .shortcut-description {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+
+    .shortcut-key {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+        min-width: 1.5rem;
+    }
+}

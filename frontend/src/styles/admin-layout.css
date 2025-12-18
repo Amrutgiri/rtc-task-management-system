@@ -1,0 +1,157 @@
+/* Admin Layout Styles */
+
+.admin-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.admin-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 280px;
+  margin-top: 70px;
+}
+
+/* Content Header */
+.content-header {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.content-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Main Content */
+.admin-content {
+  flex: 1;
+  padding: 20px 30px;
+}
+
+/* Footer */
+.admin-footer {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 20px 30px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .admin-content-wrapper {
+    margin-left: 0;
+    margin-top: 70px;
+  }
+
+  .content-header {
+    padding: 20px;
+  }
+
+  .content-title {
+    font-size: 24px;
+  }
+
+  .admin-content {
+    padding: 15px 20px;
+  }
+
+  .admin-footer {
+    padding: 15px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .content-header {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .content-title {
+    font-size: 20px;
+  }
+
+  .admin-content {
+    padding: 12px 15px;
+  }
+
+  .admin-footer {
+    padding: 12px 15px;
+  }
+
+  .footer-content p {
+    font-size: 12px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+}
+
+/* Smooth Transitions */
+.admin-wrapper * {
+  transition: none;
+}
+
+/* Print Styles */
+@media print {
+  .admin-navbar,
+  .admin-sidebar,
+  .admin-footer {
+    display: none;
+  }
+
+  .admin-content-wrapper {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

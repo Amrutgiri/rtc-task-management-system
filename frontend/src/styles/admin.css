@@ -1,0 +1,464 @@
+/* ============================================
+   ADMIN PANEL STYLES
+   ============================================ */
+
+.admin-users-page {
+  background-color: var(--bg-secondary);
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.admin-users-page h1 {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.admin-users-page .text-muted {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   FILTER CARD
+   ============================================ */
+
+.admin-users-page .card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.admin-users-page .card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-users-page .form-control,
+.admin-users-page .form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.admin-users-page .form-control:focus,
+.admin-users-page .form-select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* ============================================
+   USERS TABLE
+   ============================================ */
+
+.admin-users-page .table {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Fix for dropdown being clipped by table-responsive */
+@media (min-width: 992px) {
+  .admin-users-page .table-responsive {
+    overflow: visible;
+  }
+}
+
+.admin-users-page .table thead th {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1rem 0.875rem;
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.admin-users-page .table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.15s ease;
+}
+
+.admin-users-page .table tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.admin-users-page .table tbody tr.table-secondary {
+  opacity: 0.7;
+  background-color: #e2e3e5 !important;
+}
+
+.admin-users-page .table td {
+  padding: 1rem 0.875rem;
+  vertical-align: middle;
+}
+
+.admin-users-page .table td .fw-500 {
+  font-weight: 500;
+}
+
+.admin-users-page .avatar-circle {
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+
+.admin-users-page .badge {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.badge {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 0.375rem;
+  padding: 0.625rem 1rem;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  color: white;
+}
+
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-toggle.no-caret {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.dropdown-toggle.no-caret:hover {
+  color: var(--text-primary);
+}
+
+.dropdown-menu {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.dropdown-divider {
+  margin: 0.5rem 0;
+  border-color: #dee2e6;
+}
+
+/* ============================================
+   MODALS
+   ============================================ */
+
+.modal-content {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+}
+
+.modal-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.modal-header .modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+
+.modal .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.modal .form-label {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.modal .form-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+/* ============================================
+   FORM VALIDATION
+   ============================================ */
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath fill='%23dc3545' d='M8 4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3A.5.5 0 0 0 8 4z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.alert {
+  border-radius: 0.375rem;
+  padding: 1rem;
+  border: none;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .admin-users-page {
+    padding-top: 1rem;
+  }
+
+  .admin-users-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-users-page .table {
+    font-size: 0.85rem;
+  }
+
+  .admin-users-page .table thead th,
+  .admin-users-page .table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .admin-users-page .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-header .modal-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content {
+  animation: slideIn 0.3s ease;
+}
+
+.table tbody tr {
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* ============================================
+   CARD FOOTER
+   ============================================ */
+
+.card-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   LOADER SPINNER
+   ============================================ */
+
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.25em;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.empty-state p {
+  font-size: 1rem;
+  margin: 0;
+}

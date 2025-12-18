@@ -1,0 +1,6 @@
+name,email,role,password
+John Doe,john.doe@example.com,developer,Password123
+Jane Smith,jane.smith@example.com,manager,Password456
+Bob Johnson,bob.johnson@example.com,developer,Password789
+Alice Williams,alice.williams@example.com,developer,Password321
+Charlie Brown,charlie.brown@example.com,manager,Password654

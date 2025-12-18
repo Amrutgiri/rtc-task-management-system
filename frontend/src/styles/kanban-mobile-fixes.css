@@ -1,0 +1,155 @@
+/* ============================================
+   KANBAN PAGE MOBILE FIXES
+   Add to kanban.css
+   ============================================ */
+
+/* Filter Section Mobile */
+@media (max-width: 767.98px) {
+
+    /* Filter container - stack vertically */
+    .kanban-filters {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .kanban-filters .row {
+        margin: 0;
+    }
+
+    .kanban-filters .col-md-3,
+    .kanban-filters .col-md-4 {
+        padding: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .kanban-filters .form-control,
+    .kanban-filters .form-select {
+        width: 100%;
+        font-size: 16px;
+        /* Prevent iOS zoom */
+    }
+
+    /* Filter buttons */
+    .kanban-filters .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Modal Mobile Fixes */
+@media (max-width: 767.98px) {
+
+    /* Make modal full width on mobile */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    .modal-content {
+        border-radius: 0.5rem;
+    }
+
+    /* Modal header */
+    .modal-header {
+        padding: 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    /* Modal body */
+    .modal-body {
+        padding: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Modal footer */
+    .modal-footer {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    /* Form inside modal */
+    .modal-body .form-group,
+    .modal-body .mb-3 {
+        margin-bottom: 1rem;
+    }
+
+    .modal-body .form-control,
+    .modal-body .form-select,
+    .modal-body textarea {
+        font-size: 16px !important;
+        /* Prevent zoom */
+        padding: 0.75rem;
+    }
+
+    .modal-body textarea {
+        min-height: 100px;
+    }
+
+    .modal-body label {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Kanban Board - Prevent horizontal scrolling */
+@media (max-width: 767.98px) {
+
+    /* Container should not overflow */
+    .kanban-container {
+        overflow-x: hidden;
+        padding: 0.5rem;
+    }
+
+    /* Board wrapper */
+    .kanban-board-wrapper {
+        overflow-x: hidden;
+    }
+
+    /* Ensure no elements cause horizontal scroll */
+    .kanban-board,
+    .kanban-column-wrapper,
+    .kanban-column,
+    .kanban-card {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Cards should fit in container */
+    .kanban-card .card-body {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .kanban-card .card-title,
+    .kanban-card .card-description {
+        word-wrap: break-word;
+    }
+}
+
+/* Page header mobile */
+@media (max-width: 767.98px) {
+
+    .kanban-page-header h1,
+    .kanban-page-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .kanban-page-header .d-flex {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .kanban-page-header .btn {
+        width: 100%;
+    }
+}

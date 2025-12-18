@@ -1,0 +1,42 @@
+.admin-data-table th {
+    user-select: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #495057;
+}
+
+.admin-data-table .sort-indicator {
+    opacity: 0.5;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.admin-data-table th:hover .sort-indicator {
+    opacity: 1;
+}
+
+.admin-data-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.admin-data-table .btn-group {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-data-table .d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .admin-data-table .btn-group {
+        width: 100%;
+    }
+
+    .admin-data-table .btn-group .btn {
+        flex: 1;
+    }
+}
